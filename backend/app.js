@@ -7,17 +7,12 @@ const onerror = require("koa-onerror");
 // 用来解析body
 const bodyparser = require("koa-bodyparser");
 const logger = require("koa-logger");
-const WebSocket = require("ws");
-// 引用Server类:
-const WebSocketServer = WebSocket.Server;
-
-// 实例化:
-const wss = new WebSocketServer({
-  port: 3001
-});
 
 const index = require("./routes/index");
 const users = require("./routes/users");
+
+// 引入ws服务器
+require("./wss.js");
 
 const app = new Koa();
 
@@ -47,16 +42,6 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
-
-wss.on("connection", function(ws) {
-  console.log(`websocket connected`);
-  ws.on("message", function(message) {
-    ws.send(`from backend: 前端，您瞧好嘞！`);
-    setInterval(() => {
-      ws.send(`来自后端的数据块`);
-    }, 2000);
-  });
-});
 
 // error-handling
 app.on("error", (err, ctx) => {

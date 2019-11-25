@@ -1,4 +1,5 @@
-// 引入websocket模块
+// 引入ws模块
+// https://github.com/websockets/ws
 const WebSocket = require("ws");
 // 引用Server类:
 const WebSocketServer = WebSocket.Server;

@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <ul>
+      <li v-for="(item,index) in resArr" :key="index">{{item}}</li>
+    </ul>
   </div>
 </template>
 
@@ -34,8 +37,7 @@ export default {
     },
     websocketonopen() {
       //连接建立之后执行send方法发送数据
-      let _data = { test: "12345" };
-      this.websock.send(JSON.stringify(_data));
+      this.websock.send("后端，开门！");
     },
     websocketonerror() {
       //连接建立失败重连
@@ -43,7 +45,7 @@ export default {
     },
     websocketonmessage(e) {
       //数据接收
-      console.log(e.data);
+      this.resArr.push(e.data);
     },
     websocketclose(e) {
       //关闭
@@ -59,14 +61,10 @@ h3 {
   margin: 40px 0 0;
 }
 ul {
-  list-style-type: none;
+  width: 20vw;
   padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  margin: 10px auto;
+  list-style: none;
+  line-height: 2;
 }
 </style>

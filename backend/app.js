@@ -49,14 +49,12 @@ app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
 
 wss.on("connection", function(ws) {
-  console.log(`[SERVER] connection()`);
+  console.log(`websocket connected`);
   ws.on("message", function(message) {
-    console.log(`[SERVER] Received: ${message}`);
-    ws.send(`from backend: ${message}`, err => {
-      if (err) {
-        console.log(`[SERVER] error: ${err}`);
-      }
-    });
+    ws.send(`from backend: 前端，您瞧好嘞！`);
+    setInterval(() => {
+      ws.send(`来自后端的数据块`);
+    }, 2000);
   });
 });
 

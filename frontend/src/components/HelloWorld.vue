@@ -13,7 +13,8 @@ export default {
   data() {
     return {
       websock: null,
-      resArr:[]
+      wsUrl: "ws://127.0.0.1:3001",
+      resArr: []
     };
   },
   created() {
@@ -25,8 +26,7 @@ export default {
   methods: {
     initWebSocket() {
       //初始化weosocket
-      const wsuri = "ws://127.0.0.1:3000";
-      this.websock = new WebSocket(wsuri);
+      this.websock = new WebSocket(this.wsUrl);
       this.websock.onopen = this.websocketonopen;
       this.websock.onmessage = this.websocketonmessage;
       this.websock.onerror = this.websocketonerror;
@@ -35,7 +35,7 @@ export default {
     websocketonopen() {
       //连接建立之后执行send方法发送数据
       let _data = { test: "12345" };
-      this.websock.send(_data);
+      this.websock.send(JSON.stringify(_data));
     },
     websocketonerror() {
       //连接建立失败重连
@@ -43,8 +43,7 @@ export default {
     },
     websocketonmessage(e) {
       //数据接收
-      const redata = JSON.parse(e.data);
-      console.log(redata);
+      console.log(e.data);
     },
     websocketclose(e) {
       //关闭

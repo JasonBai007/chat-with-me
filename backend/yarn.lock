@@ -368,7 +368,7 @@ co-body@^6.0.0:
     raw-body "^2.3.3"
     type-is "^1.6.16"
 
-co@^4.4.0, co@^4.6.0:
+co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npm.taobao.org/co/download/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
@@ -510,7 +510,7 @@ debug@^3.1.0, debug@^3.2.6:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.1:
+debug@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npm.taobao.org/debug/download/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   integrity sha1-O3ImAlUQnGtYnO4FDx1RYTlmR5E=
@@ -1313,16 +1313,6 @@ koa-static@^5.0.0:
   dependencies:
     debug "^3.1.0"
     koa-send "^5.0.0"
-
-koa-websocket@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npm.taobao.org/koa-websocket/download/koa-websocket-6.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fkoa-websocket%2Fdownload%2Fkoa-websocket-6.0.0.tgz#7fb7698a7004c07aac663b15e84bf4bc99901352"
-  integrity sha1-f7dpinAEwHqsZjsV6Ev0vJmQE1I=
-  dependencies:
-    co "^4.4.0"
-    debug "^4.0.1"
-    koa-compose "^4.1.0"
-    ws "^7.0.1"
 
 koa@^2.7.0:
   version "2.11.0"
@@ -2535,7 +2525,7 @@ write-file-atomic@^2.0.0:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.2"
 
-ws@^7.0.1:
+ws@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npm.taobao.org/ws/download/ws-7.2.0.tgz?cache=0&sync_timestamp=1571495118606&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fws%2Fdownload%2Fws-7.2.0.tgz#422eda8c02a4b5dba7744ba66eebbd84bcef0ec7"
   integrity sha1-Qi7ajAKktdundEumbuu9hLzvDsc=

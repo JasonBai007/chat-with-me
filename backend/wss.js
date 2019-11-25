@@ -15,6 +15,6 @@ wss.on("connection", function(ws) {
     ws.send(`from backend: 前端，您瞧好嘞！`);
     setInterval(() => {
       ws.send(`来自后端的数据块`);
-    }, 2000);
+    }, 1000);
   });
 });

@@ -1,11 +1,11 @@
 # vue-websocket-koa
 a full-stack application  with websocket technology.
 
-## How to use
-先进入前后端目录，安装各自的依赖<br>
+![preview](https://github.com/jasonBai007/vue-websocket-koa/raw/master/preview.png)
 
-执行根目录的shell脚本，启动后端和前端项目<br>
-sh start.sh
+## How to use
+1、先进入前后端目录，安装各自的依赖<br>
+2、执行根目录的shell脚本（sh start.sh），启动后端和前端项目<br>
 
 ## Need to know
 前端使用了原生的websocket技术，后端使用了ws模块

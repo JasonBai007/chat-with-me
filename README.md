@@ -1,7 +1,7 @@
 # vue-websocket-koa
 a full-stack application  with websocket technology.
 
-![preview](https://github.com/jasonBai007/vue-websocket-koa/raw/master/preview.png)
+![preview](https://github.com/jasonBai007/vue-websocket-koa/raw/master/preview.gif)
 
 ## How to use
 1、先进入前后端目录，安装各自的依赖<br>
